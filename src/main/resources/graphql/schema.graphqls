@@ -1,0 +1,23 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+type Task {
+    taskId: ID
+    board: Board
+    title: String
+    description: String
+}
+type Board {
+    boardId: ID
+    task: [Task]
+    title: String
+    position: int
+}
+
+type Query {
+    findAllTask: [Task]
+}
+
+type Mutation{
+}
